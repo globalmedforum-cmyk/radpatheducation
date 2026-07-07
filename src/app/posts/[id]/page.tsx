@@ -36,7 +36,7 @@ export default async function Post({ params }: { params: Promise<{ id: string }>
       {/* Content with MDX */}
       <div className="prose prose-slate prose-lg max-w-none prose-headings:text-[#0b1c2c] prose-a:text-blue-600 hover:prose-a:text-blue-800 prose-img:rounded-xl">
         <MDXRemote 
-          source={postData.content} 
+          source={postData.content || ''} 
           components={{ Video, Download, CompareImages }} 
         />
       </div>
